@@ -1,0 +1,42 @@
+@import "./constants";
+
+.grid {
+  position: relative;
+  min-height: 100%;
+  background-color: $grey;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  overflow: auto;
+}
+.portfolio {
+  margin: 1em;
+  img {
+    width: 400px;
+    height: 400px;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+    padding: 1em;
+  }
+}
+.button {
+  position: absolute;
+  opacity: 0;
+  align-items: center;
+  transform: translate(160px, -220px);
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(68, 68, 192);
+  border: 1px solid rgb (68, 68, 192);
+  padding: 0.7em;
+  color: white;
+  border-radius: 5px;
+}
+.portfolio:hover .image {
+  opacity: 0.4;
+}
+.portfolio:hover .button {
+  opacity: 1;
+  position: absolute;
+}
