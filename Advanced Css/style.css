@@ -1,11 +1,10 @@
 .grid {
   position: relative;
   min-height: 100%;
-  background-color: #c3cfe2;
-  margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   overflow: auto;
+  gap: 0.7em;
 }
 
 .portfolio {
@@ -17,7 +16,7 @@
   display: block;
   border-radius: 10px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   padding: 1em;
 }
 
@@ -147,6 +146,24 @@ body {
   border-radius: 100px;
   border: white 5px solid;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-top: -50px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+    display: block;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr, 1fr;
+  }
+}
+@media screen and (min-device-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
