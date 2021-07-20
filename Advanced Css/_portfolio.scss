@@ -1,14 +1,13 @@
 @import "./constants";
 
 .container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(240px,40vw), 1fr));
+  grid-gap: 24px 40px;
 }
 .portfolio {
   position:relative;
-  width: 550px;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   background-color: $grey;
